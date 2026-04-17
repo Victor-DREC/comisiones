@@ -1,35 +1,113 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial;
-    background-color: #0f172a;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* Contenedor principal */
 .contenedor {
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #cbd5f5;
+}
+
+/* Inputs */
 input {
     width: 100%;
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
 }
 
+/* Botón */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #22c55e;
+    padding: 12px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
     border: none;
+    border-radius: 8px;
     color: white;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #16a34a;
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+/* Resultados */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 5px;
+}
+
+p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Tablets */
+@media (min-width: 600px) {
+    .contenedor {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 900px) {
+    .contenedor {
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
