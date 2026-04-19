@@ -111,3 +111,11 @@ p {
         font-size: 2rem;
     }
 }
+
+.error-message {
+    color: red;
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
